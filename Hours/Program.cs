@@ -38,7 +38,17 @@ namespace Akcesory
         static void Main(string[] args)
         {
             Hours godz = new Hours();
-            godz.Hour = Int32.Parse(Console.ReadLine());
+            Console.Write("Podaj godzinę: ");
+            try
+            {
+                godz.Hour = Int32.Parse(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Nieprawidłowy Format godziny");
+                
+            }
+            
             // godz.Hour = 1; //dostęp do zmiennej prywatnej poprzez właściwość
                            //przypisanie możliwe dzięki sekcji set we własności Hour
             Console.WriteLine(godz);
